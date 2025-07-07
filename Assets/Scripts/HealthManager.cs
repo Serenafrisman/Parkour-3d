@@ -8,7 +8,6 @@ public class HealthManager : MonoBehaviour
     public int HealthPoints;
     public int maxHealthPoints;
     public UIManager uiManager;
-    public TextMeshProUGUI txtHealthPoints;
     
     void Start()
     {

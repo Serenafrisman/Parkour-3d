@@ -17,12 +17,14 @@ public class ScoreManager : MonoBehaviour
     public void AddScore()
     {
         score++;
+        if(uiManager)
         uiManager.UpdateScore(score);
     }
 
     public void AddScore(int scorePoints)
     {
         score += scorePoints;
+        if(uiManager)
         uiManager.UpdateScore(score);
-    }
+    } 
 }

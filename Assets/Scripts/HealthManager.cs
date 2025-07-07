@@ -9,8 +9,7 @@ public class HealthManager : MonoBehaviour
     public int maxHealthPoints;
     public UIManager uiManager;
     public TextMeshProUGUI txtHealthPoints;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();

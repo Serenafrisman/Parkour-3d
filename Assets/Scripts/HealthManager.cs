@@ -16,6 +16,12 @@ public class HealthManager : MonoBehaviour
         HealthPoints = maxHealthPoints;
     }
 
+    public void AddScore()
+    {
+        HealthPoints--;
+        uiManager.UpdateHealth(HealthPoints);
+    }
+
     public void TakeDamage(int damagePoints)
     {
         if (HealthPoints <= damagePoints)

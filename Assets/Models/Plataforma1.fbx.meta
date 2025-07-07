@@ -1,25 +1,18 @@
 fileFormatVersion: 2
-guid: 244090aaaa4d63b4ba4bbab9443eaafd
+guid: 535fab1abc3ab1c4eb7294373074c7c1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Columna2
-    100004: Columna3
-    100006: Columna4
-    100008: Light
-    100010: Light.001
-    100012: //RootNode
-    100014: Plataforma Tablas
-    400000: Camera
-    400002: Columna2
-    400004: Columna3
-    400006: Columna4
-    400008: Light
-    400010: Light.001
-    400012: //RootNode
-    400014: Plataforma Tablas
-    2000000: Camera
+    100000: Columna2
+    100002: Columna3
+    100004: Columna4
+    100006: Plataforma Tablas
+    100008: //RootNode
+    400000: Columna2
+    400002: Columna3
+    400004: Columna4
+    400006: Plataforma Tablas
+    400008: //RootNode
     2100000: Madera tablas
     2100002: Madera colunma
     2300000: Columna2
@@ -34,24 +27,22 @@ ModelImporter:
     4300002: Columna2
     4300004: Columna3
     4300006: Columna4
-    10800000: Light
-    10800002: Light.001
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Madera colunma
-    second: {fileID: 2100000, guid: b3a37181efcef6844aaf8d2c1747e926, type: 2}
+    second: {fileID: 2100000, guid: 47e9cbfdea2fcef45a39910618a96247, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Madera tablas
-    second: {fileID: 2100000, guid: 056cf17f788c8c24d86b1df11a05e615, type: 2}
+    second: {fileID: 2100000, guid: dd91d221de16c574ebb67e43490a52b6, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rough_wood_diff_1k
-    second: {fileID: 2800000, guid: 37abde9bbbd0a894fb0b3110f98c3016, type: 3}
+    second: {fileID: 2800000, guid: 817dc3ae5bff4d846890c1b54ac4c7fe, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

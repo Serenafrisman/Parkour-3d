@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txtScore.text = "0";
+        txtScore.text = "";
     }
     public void UpdateScore(int score)
     {

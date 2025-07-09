@@ -20,6 +20,7 @@ public class DeathRespawn : MonoBehaviour
         {
             Debug.Log("Respawn");
             SceneManager.LoadScene("FPS parkour");
+            SceneManager.LoadScene("Input UI Interaction");
         }
     }
 }

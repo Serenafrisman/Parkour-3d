@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour
 {
     score -= points;
     if (score < 0)
-        score = 0;  // Evitar score negativo
+        score = 0;  
 
     if (uiManager)
         uiManager.UpdateScore(score);

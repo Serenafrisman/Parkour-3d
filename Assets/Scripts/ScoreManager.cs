@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score;
+    public int health;
     public UIManager uiManager;
 
     // Start is called before the first frame update
@@ -26,7 +27,14 @@ public class ScoreManager : MonoBehaviour
         score += scorePoints;
         if(uiManager)
         uiManager.UpdateScore(score);
-    } 
+    }
+
+    public void DoDamage(int damage)
+    {
+        health -= damage;
+        uiManager.UpdateHealth(health);
+    }
+
     public void SubtractScore(int points)
 {
     score -= points;

@@ -5,36 +5,19 @@ using UnityEngine;
 public class DeteccionDeColisiones : MonoBehaviour
 {
     public ScoreManager scoreManager;
-    public MercaderiaScript mercaderiaScript;
-    
+
     void Start()
     {
-          if(scoreManager == null)
         scoreManager = FindObjectOfType<ScoreManager>();
-        mercaderiaScript = GetComponent<MercaderiaScript>();
     }
 
-    void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Contacto");
-       
-        if(scoreManager != null)
+        Debug.Log("Pinche: " + other.gameObject.name);
+        if (other.gameObject.name == "SimpleFPSController")
         {
-          scoreManager.SubtractScore(10);
+            Destroy(gameObject);
+            scoreManager.DoDamage(10);
         }
-        else
-        {
-          Debug.LogError("ScoreManager es null, no está asignado");
-        }
-        if (col.gameObject.name == "Player")
-        {
-            //Destroy(gameObject)
-        }
-        if(mercaderiaScript != null)
-            scoreManager.AddScore(mercaderiaScript.scorePoints);
-        else
-            Debug.LogWarning("MercaderiaScript no asignado");
-
     }
-    }
-
+}

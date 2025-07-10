@@ -16,7 +16,7 @@ public class DamageObjectScript : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             healthManager.TakeDamage(damagePoints);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

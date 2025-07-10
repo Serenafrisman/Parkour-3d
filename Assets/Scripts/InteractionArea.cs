@@ -9,6 +9,7 @@ public class InteractionArea : MonoBehaviour
     public MercaderiaScript mercaderia;
     public ScoreManager score;
 
+
     private void Start()
     {
         UIInteractionMessage.SetActive(false);
@@ -40,9 +41,12 @@ public class InteractionArea : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
+{
+    if (mercaderia != null && other.gameObject == mercaderia.gameObject)
     {
         EndInteraction();
     }
+}
 
     void EndInteraction()
     {

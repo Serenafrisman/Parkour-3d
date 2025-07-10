@@ -1,35 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class HealthManager : MonoBehaviour
+public class HealthManager: MonoBehaviour
 {
-    public int HealthPoints;
-    public int maxHealthPoints;
+    public int score;
     public UIManager uiManager;
-    
+
+    // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
-        HealthPoints = maxHealthPoints;
+        score = 0;
     }
 
     public void AddScore()
     {
-        HealthPoints--;
-        uiManager.UpdateHealth(HealthPoints);
+        score++;
+        if(uiManager)
+        uiManager.UpdateScore(score);
     }
 
-    public void TakeDamage(int damagePoints)
+    public void AddScore(int scorePoints)
     {
-        if (HealthPoints <= damagePoints)
-        {
-            // Game over
-            return;
-        }
-        HealthPoints -= damagePoints;
-        uiManager.UpdateHealth(HealthPoints);
-        Debug.Log("Damage");
-    }
+        score += scorePoints;
+        if(uiManager)
+        uiManager.UpdateScore(score);
+    } 
+    public void SubtractScore(int points)
+{
+    score -= points;
+    if (score < 0)
+        score = 0;  // Evitar score negativo
+
+    if (uiManager)
+        uiManager.UpdateScore(score);
+}
+    public void TakeDamage(int damage)
+{
+    SubtractScore(damage);
+}
 }

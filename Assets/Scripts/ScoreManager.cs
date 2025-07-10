@@ -27,4 +27,13 @@ public class ScoreManager : MonoBehaviour
         if(uiManager)
         uiManager.UpdateScore(score);
     } 
+    public void SubtractScore(int points)
+{
+    score -= points;
+    if (score < 0)
+        score = 0;  // Evitar score negativo
+
+    if (uiManager)
+        uiManager.UpdateScore(score);
+}
 }

@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateHealth(int health)
     {
+        Debug.Log("Actualizando UI con vida: " + health); // 👈 Revisá esto
         txtHealthPoints.text = health.ToString();
     }
+    
 }
